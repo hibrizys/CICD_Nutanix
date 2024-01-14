@@ -1,8 +1,11 @@
 variables:
   MAVEN_OPTS: -Dmaven.repo.local=.m2/repository
 
-image: maven:3-openjdk-17
-
+image: 
+    name: maven:3-openjdk-17
+    entrypoint: [""]
+    options: --pull if-not-present
+    
 stages:
     - clean
     - install

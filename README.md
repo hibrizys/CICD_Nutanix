@@ -1,14 +1,111 @@
-# Gitlab VM Kel 1
+# Group 1 CICD
+
+![Flow Service](gitlab-windows/img/Nutanix_Services-DevSecOps.png)
+
+Study Case CICD PT. Tabel Data Informatika
+
+## Overview
+
+This repository demonstrates the implementation of a basic CI/CD pipeline for a Spring Boot application. The goal is to automate the build, test, and deployment processes, enabling a more efficient and reliable software development lifecycle.
+
+## Project Team member
+
+| Name                                          | Student ID     | Major                          |
+| --------------------------------------------- | -------------- | ------------------------------- |
+| **Hibrizy Jodistira Hibatullah Sulistiyo**   | 1303204017     | Bachelor of Information Technology |
+| **Rizky Ramdhan Nugraha**                      | 1302203122     | Bachelor of Software Engineering |
+| **Ahmad Fadhil Aulia Faisal**                  | 1302200084     | Bachelor of Software Engineering |
+| **Mochammad Kaori Rahadian**                  | 1302204056     | Bachelor of Software Engineering |
 
 
+## Features
 
-## Getting started
+- **Automated Build:** The project utilizes Apache Maven to automate the build process.
+- **Automated Testing:** JUnit are incorporated to ensure code quality through automated testing.
+- **Continuous Integration:** GitLab CI/CD VM Nutanix is configured to trigger builds automatically upon code changes.
+- **Continuous Deployment:** GitLab CI/CD VM Nutanix is configured to deploy the application to [Deployment Environment] automatically.
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+## Project Structure
 
-## Add your files
+D:.
+├───.mvn
+│   └───wrapper
+├───src
+│   ├───main
+│   │   ├───java
+│   │   │   └───com
+│   │   │       └───maryanto
+│   │   │           └───dimas
+│   │   │               └───example
+│   │   │                   └───kelasplatformengineer
+│   │   │                       ├───controller
+│   │   │                       ├───model
+│   │   │                       ├───repository
+│   │   │                       └───service
+│   │   └───resources
+│   │       ├───db
+│   │       │   └───migration
+│   │       └───templates
+│   └───test
+│       └───java
+│           └───com
+│               └───maryanto
+│                   └───dimas
+│                       └───example
+│                           └───kelasplatformengineer
+└───target
+    ├───classes
+    │   ├───com
+    │   │   └───maryanto
+    │   │       └───dimas
+    │   │           └───example
+    │   │               └───kelasplatformengineer
+    │   │                   ├───controller
+    │   │                   ├───model
+    │   │                   ├───repository
+    │   │                   └───service
+    │   ├───db
+    │   │   └───migration
+    │   └───templates
+    ├───generated-sources
+    │   └───annotations
+    ├───generated-test-sources
+    │   └───test-annotations
+    ├───maven-archiver
+    ├───maven-status
+    │   └───maven-compiler-plugin
+    │       ├───compile
+    │       │   └───default-compile
+    │       └───testCompile
+    │           └───default-testCompile
+    ├───surefire-reports
+    └───test-classes
+        └───com
+            └───maryanto
+                └───dimas
+                    └───example
+                        └───kelasplatformengineer
+
+
+## Getting Started
+
+### Prerequisites
+
+#### Nutanix Platform
+- Centos 7, Nutanix Platform already support it
+- Source Code SpringBootApp from Mentor
+- [Java-17 on Centos 7](https://computingforgeeks.com/install-java-openjdk-17-on-centos-rhel-7/) 
+- [Apache Maven 3.8.5 on Centos 7](https://tecadmin.net/install-apache-maven-on-centos/) 
+- [Docker on Centos 7](https://docs.docker.com/engine/install/centos/) 
+- [Gitlab on Centos 7](https://about.gitlab.com/install/#centos-7)
+- [PostgreSQL 14 on Centos 7](https://computingforgeeks.com/how-to-install-postgresql-14-centos-rhel-7/)
+- [SonarQube on Centos 7](https://blog.yasithab.com/centos/install-sonarqube-on-centos-7/)
+- [Nexus OSS on Centos 7](https://blog.yasithab.com/centos/install-nexus-repository-oss-on-centos-7/)
+- [Grafana on Centos 7](https://roman-academy.medium.com/how-to-install-and-configure-grafana-on-centos-7-56c28dc04840)
+- [Prometheus on Centos 7](https://rm-rf.medium.com/how-to-install-and-configure-prometheus-on-centos-7-1505e5bd7a3d)
+
+
 
 - [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
 - [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:

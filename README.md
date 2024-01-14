@@ -1,4 +1,4 @@
-# Gitlab-Vm
+# Gitlab VM Kel 1
 
 
 
@@ -15,14 +15,14 @@ Already a pro? Just edit this README.md and make it your own. Want to make it ea
 
 ```
 cd existing_repo
-git remote add origin https://gitlab.com/hibrizys/gitlab-vm.git
+git remote add origin https://gitlab.kelompok1.com/root/gitlab-vm.git
 git branch -M main
 git push -uf origin main
 ```
 
 ## Integrate with your tools
 
-- [ ] [Set up project integrations](https://gitlab.com/hibrizys/gitlab-vm/-/settings/integrations)
+- [ ] [Set up project integrations](https://gitlab.kelompok1.com/root/gitlab-vm/-/settings/integrations)
 
 ## Collaborate with your team
 

@@ -1,0 +1,81 @@
+variables:
+  MAVEN_OPTS: -Dmaven.repo.local=.m2/repository
+
+image: maven:3-openjdk-17
+
+stages:
+    - clean
+    - install
+    - test
+    - build
+    - package
+    - deploy
+    - sonar-test
+
+
+cache:
+  paths:
+    - .m2/repository
+    - target
+
+
+clean_job:
+  stage: clean
+  tags:
+    - clean 
+  script: 
+    - echo "Maven clean started"
+    - "mvn clean"
+
+
+install_job:
+  stage: install
+  tags:
+    - install 
+  script: 
+    - echo "Maven install started"
+    - "mvn install"
+
+
+test_job:
+  stage: test
+  tags:
+    - test 
+  script: 
+    - echo "Maven test started"
+    - "mvn test"
+
+
+build_job:
+  stage: build
+  tags:
+    - build 
+  script: 
+    - echo "Maven compile started"
+    - "mvn compile"
+
+
+package_job:
+  stage: package
+  tags:
+    - package 
+  script: 
+    - echo "Maven packaging started"
+    - "mvn package"
+
+
+Deploy_job:
+  stage: deploy
+  tags:
+    - deploy 
+  script: 
+    - echo "Maven deploy started"
+
+
+Sonarqube_Job:
+  stage: sonar-test
+  tags:
+    - sonar-test
+  script:
+    - mvn --batch-mode verify sonar:sonar -Dsonar.host.url=$SONAR_URL -Dsonar.login=$SONAR_LOGIN -Dsonar.password=$SONAR_PASSWORD
+

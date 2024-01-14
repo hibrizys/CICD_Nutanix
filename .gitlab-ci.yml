@@ -4,7 +4,6 @@ variables:
 image: 
     name: maven:3-openjdk-17
     entrypoint: [""]
-    options: --pull if-not-present
     
 stages:
     - clean

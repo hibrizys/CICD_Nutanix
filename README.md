@@ -28,6 +28,7 @@ This repository demonstrates the implementation of a basic CI/CD pipeline for a 
 
 ## Project Structure
 
+```bash
 D:.
 ├───.mvn
 │   └───wrapper
@@ -86,7 +87,7 @@ D:.
                 └───dimas
                     └───example
                         └───kelasplatformengineer
-
+```
 
 ## Getting Started
 

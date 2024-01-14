@@ -8,7 +8,7 @@ Study Case CICD PT. Tabel Data Informatika
 
 This repository demonstrates the implementation of a basic CI/CD pipeline for a Spring Boot application. The goal is to automate the build, test, and deployment processes, enabling a more efficient and reliable software development lifecycle.
 
-## Project Team member
+## Team member
 
 | Name                                          | Student ID     | Major                          |
 | --------------------------------------------- | -------------- | ------------------------------- |

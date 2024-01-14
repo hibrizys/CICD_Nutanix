@@ -1,6 +1,6 @@
 # Group 1 CICD
 
-![Flow Service](gitlab-windows/img/Nutanix_Services-DevSecOps.png)
+![Flow Service](https://gitlab.com/hibrizys/gitlab-windows/-/raw/main/img/Nutanix_Services-DevSecOps.png?ref_type=heads)
 
 Study Case CICD PT. Tabel Data Informatika
 

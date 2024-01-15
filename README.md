@@ -29,7 +29,7 @@ This repository demonstrates the implementation of a basic CI/CD pipeline for a 
 ## Project Structure
 
 ```bash
-D:.
+root:.
 ├───.mvn
 │   └───wrapper
 ├───src
@@ -100,6 +100,7 @@ D:.
 - [ ] [Apache Maven 3.8.5 on Centos 7](https://tecadmin.net/install-apache-maven-on-centos/) 
 - [ ] [Docker on Centos 7](https://docs.docker.com/engine/install/centos/) 
 - [ ] [Gitlab on Centos 7](https://about.gitlab.com/install/#centos-7)
+- [ ] [Gitlab Runner on Centos 7](https://www.jagoanhosting.com/tutorial/tutorial-vps/cara-install-gitlab-runner-di-centos-7)
 - [ ] [PostgreSQL 14 on Centos 7](https://computingforgeeks.com/how-to-install-postgresql-14-centos-rhel-7/)
 - [ ] [SonarQube on Centos 7](https://blog.yasithab.com/centos/install-sonarqube-on-centos-7/)
 - [ ] [Nexus OSS on Centos 7](https://blog.yasithab.com/centos/install-nexus-repository-oss-on-centos-7/)
@@ -109,9 +110,31 @@ D:.
 
 ## Test and Deploy
 
+- After the **Pre-Req** is required, u have to push your projcet on Gitlab VM
+    - if the error is **SSL Verification** on the progress to git clone or git push, you have to do this command:
+    ```
+    git config --global http.sslVerify false
+    ```
+- To run register runner you can command:
+    - On windows:
+    ```
+    sudo gitlab-runner register --url https://gitlab.com/ --registration-token $TOKEN_REGISTRATION_RUNNER
+    ```
+    - On Centos Nutanix Platform:
+    ```
+    sudo gitlab-runner register --url https://10.38.56.54/root/gitlab-vm --registration-token $TOKEN_REGISTRATION_RUNNER
+    ```
+    After add the command, you can input the runner section like Tags, description, etc.
+- For Deploy Apache maven you can command:
+    ```
+    mvn clean install test
+    mvn spring-boot:start
+    ```
+- For **Intergrate Sonarqube to Maven Apache** you can se [here](https://blog.knoldus.com/integrate-maven-project-sonarqube/)
+- For **Intergrate Nexus to Maven Apache** you can se [here](https://stackoverflow.com/questions/50620209/integrate-maven-with-nexus-repository) 
 
 
-### User and Password Nutanix Platform
+## Documentation User and Password Nutanix Platform
 ```
 Login SSH Centos 7 (NUTANIX) on CMD: ssh -p 33556 root@10.38.56.54
 
@@ -149,15 +172,12 @@ login terminal:
 Curl SpringbootApp Centos 7:
 - curl -X GET http://10.38.56.54:9055/api/product/
 - curl -X GET http://10.38.56.54:9055/app/
+
+Curl SpringbootApp Windows:
+- curl -X GET http://localhost/api/product/
+- curl -X GET http://localhost/app/
 ```
 
+## Integrate Grafana, Prometheus, Container Registry, Kubernetes Cluster, and Object s3 Nutanix
 
-Use the built-in continuous integration in GitLab.
-
-- [ ] [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
-
-***
+**To Be Discussed!!**

@@ -20,10 +20,10 @@ This repository demonstrates the implementation of a basic CI/CD pipeline for a 
 
 ## Features
 
-- **Automated Build:** The project utilizes Apache Maven to automate the build process.
-- **Automated Testing:** JUnit are incorporated to ensure code quality through automated testing.
-- **Continuous Integration:** GitLab CI/CD VM Nutanix is configured to trigger builds automatically upon code changes.
-- **Continuous Deployment:** GitLab CI/CD VM Nutanix is configured to deploy the application to [Deployment Environment] automatically.
+- [ ] **Automated Build:** The project utilizes Apache Maven to automate the build process.
+- [ ] **Automated Testing:** JUnit are incorporated to ensure code quality through automated testing.
+- [ ] **Continuous Integration:** GitLab CI/CD VM Nutanix is configured to trigger builds automatically upon code changes.
+- [ ] **Continuous Deployment:** GitLab CI/CD VM Nutanix is configured to deploy the application to [Deployment Environment] automatically.
 
 
 ## Project Structure
@@ -94,8 +94,8 @@ D:.
 ### Prerequisites
 
 #### Nutanix Platform
-- Centos 7, Nutanix Platform already support it
-- Source Code SpringBootApp from Mentor
+- [ ] Centos 7, Nutanix Platform already support it
+- [ ] Source Code SpringBootApp from Mentor
 - [ ] [Java-17 on Centos 7](https://computingforgeeks.com/install-java-openjdk-17-on-centos-rhel-7/) 
 - [ ] [Apache Maven 3.8.5 on Centos 7](https://tecadmin.net/install-apache-maven-on-centos/) 
 - [ ] [Docker on Centos 7](https://docs.docker.com/engine/install/centos/) 
@@ -105,7 +105,7 @@ D:.
 - [ ] [Nexus OSS on Centos 7](https://blog.yasithab.com/centos/install-nexus-repository-oss-on-centos-7/)
 - [ ] [Grafana on Centos 7](https://roman-academy.medium.com/how-to-install-and-configure-grafana-on-centos-7-56c28dc04840)
 - [ ] [Prometheus on Centos 7](https://rm-rf.medium.com/how-to-install-and-configure-prometheus-on-centos-7-1505e5bd7a3d)
-- Make sure to change the all the port to be able to access, and add [firewall](https://www.thegeekdiary.com/how-to-open-a-ports-in-centos-rhel-7/) in each port
+- [ ] Make sure to change the all the port to be able to access, and add [firewall](https://www.thegeekdiary.com/how-to-open-a-ports-in-centos-rhel-7/) in each port
 
 ## Test and Deploy
 

@@ -3,7 +3,6 @@ variables:
 
 image:
   name: maven:3-openjdk-17
-  entrypoint: [""]
 
 ## Login to Docker Desktop Windows Izy
 before_script:

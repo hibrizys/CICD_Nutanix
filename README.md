@@ -105,7 +105,7 @@ D:.
 - [Nexus OSS on Centos 7](https://blog.yasithab.com/centos/install-nexus-repository-oss-on-centos-7/)
 - [Grafana on Centos 7](https://roman-academy.medium.com/how-to-install-and-configure-grafana-on-centos-7-56c28dc04840)
 - [Prometheus on Centos 7](https://rm-rf.medium.com/how-to-install-and-configure-prometheus-on-centos-7-1505e5bd7a3d)
-- 
+- Make sure to change the all the port to be able to access, and add [firewall](https://www.thegeekdiary.com/how-to-open-a-ports-in-centos-rhel-7/) in each port
 
 
 - [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
@@ -131,6 +131,53 @@ git push -uf origin main
 - [ ] [Set auto-merge](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
 
 ## Test and Deploy
+
+### Centos 7 Nutanix Platform
+```
+Login SSH Centos 7 (NUTANIX) on CMD: ssh -p 33556 root@10.38.56.54
+
+Centos7
+User: root
+password: kel1jaya
+
+Gitlab
+User:root
+Password: kel1jaya
+Server: https://10.38.56.54:443/
+
+Nexus:
+User:admin
+Password: kel1jaya
+Server: http://10.38.56.54:8081/	
+
+SonarQube
+User:admin
+Password: kel1jaya
+Server: http://10.38.56.54:9797/
+
+Grafana
+User:admin
+Password: kel1jaya
+Server: http://10.38.56.54:3000/
+
+Prometheus
+Server: http://10.38.56.54:9999/
+
+PostgreSQL SpringbootApp Centos7
+login terminal: 
+- psql -U product_service -d product_service
+
+Curl SpringbootApp Centos 7:
+- curl -X GET http://10.38.56.54:9055/api/product/
+- curl -X GET http://10.38.56.54:9055/app/
+
+```
+```
+cd existing_repo
+git remote add origin https://gitlab.kelompok1.com/root/gitlab-vm.git
+git branch -M main
+git push -uf origin main
+```
 
 Use the built-in continuous integration in GitLab.
 

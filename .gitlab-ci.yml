@@ -7,6 +7,7 @@ image:
 
 ## Login to Docker Desktop Windows Izy
 before_script:
+  - docker logout $CI_REGISTRY_USER
   - echo $CI_JOB_TOKEN | docker login -u $CI_REGISTRY_USER --password-stdin $CI_REGISTRY
 
 stages:

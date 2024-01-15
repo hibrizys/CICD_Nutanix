@@ -5,6 +5,10 @@ image:
   name: maven:3-openjdk-17
   entrypoint: [""]
 
+## Login to Docker Desktop Windows Izy
+before_script:
+  - echo $CI_JOB_TOKEN | docker login -u $CI_REGISTRY_USER --password-stdin $CI_REGISTRY
+
 stages:
     - clean
     - install
@@ -14,9 +18,6 @@ stages:
     - deploy
     - sonar-test
 
-## Login to Docker Desktop Windows Izy
-before_script:
-  - echo "$CI_JOB_TOKEN" | docker login -u "$CI_REGISTRY_USER" --password-stdin $CI_REGISTRY
 
 cache:
   paths:
